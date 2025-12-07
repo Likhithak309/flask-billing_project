@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    /* Soft pastel gradient background */
+    background: linear-gradient(to bottom right, #fefefe, #e0f7f1);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    /* dark gray text for readability */
+}
+
+h1 {
+    color: #4d4d4d;
+    /* medium gray heading */
+}
+
+form {
+    background-color: #ffffff;
+    /* white form background */
+    padding: 25px;
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    /* very soft shadow */
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #a3d9c7;
+    /* soft green button */
+    color: #333;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8ecbb5;
+    /* slightly darker on hover */
+}
+
+.itemRow {
+    margin-bottom: 10px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 70%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #c1eee0;
+    /* soft pastel green for table headers */
+    color: #333;
+}
+
+tr:hover {
+    background-color: #e6f5f2;
+    /* soft hover effect */
+}
+
+a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #333;
+}
