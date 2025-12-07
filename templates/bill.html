@@ -1,14 +1,15 @@
-<<!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bill</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 
-    <body>
+<body>
+    <div class="container">
         <h1>Bill</h1>
 
         <table>
@@ -18,7 +19,6 @@
                 <th>Price</th>
                 <th>Total</th>
             </tr>
-
             {% for item in bill_items %}
             <tr>
                 <td>{{ item.item }}</td>
@@ -27,7 +27,18 @@
                 <td>₹{{ item.total }}</td>
             </tr>
             {% endfor %}
-
+            <tr>
+                <td colspan="3"><strong>Subtotal</strong></td>
+                <td>₹{{ subtotal }}</td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Tax / GST</strong></td>
+                <td>{{ tax }}%</td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Discount</strong></td>
+                <td>₹{{ discount }}</td>
+            </tr>
             <tr>
                 <td colspan="3"><strong>Grand Total</strong></td>
                 <td><strong>₹{{ grand_total }}</strong></td>
@@ -35,7 +46,8 @@
         </table>
 
         <br>
-        <a href="/">Go Back</a>
-    </body>
+        <a href="/" class="submitBtn">Go Back</a>
+    </div>
+</body>
 
-    </html>
+</html>

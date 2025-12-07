@@ -1,58 +1,141 @@
+/* General page */
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: linear-gradient(to bottom right, #fefefe, #e0f7f1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
     margin: 0;
     padding: 20px;
     color: #333;
 }
 
-h1 {
-    color: #4d4d4d;
+
+/* Centered container */
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
-form {
-    background-color: #ffffff;
-    padding: 25px;
-    display: inline-block;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
 }
+
+
+/* Form inputs */
 
 input {
     padding: 10px;
     margin: 5px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 1px solid #ccc;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #a3d9c7;
-    color: #333;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #8ecbb5;
+    width: calc(100% - 20px);
+    background-color: #fdfdfd;
 }
 
 .itemRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 10px;
 }
+
+.itemRow input {
+    flex: 1;
+}
+
+
+/* Buttons */
+
+button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+/* Remove button */
+
+.removeBtn {
+    background-color: #ff9aa2;
+    color: #fff;
+}
+
+.removeBtn:hover {
+    background-color: #ff6b81;
+}
+
+
+/* Add item button */
+
+.addBtn {
+    background-color: #fbc687;
+    color: #fff;
+}
+
+.addBtn:hover {
+    background-color: #f9a825;
+}
+
+
+/* Submit button */
+
+.submitBtn {
+    background-color: #a0e7e5;
+    color: #2c3e50;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.submitBtn:hover {
+    background-color: #70d6ff;
+}
+
+
+/* Extra fields (Tax / Discount) */
+
+.extra {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.extra input {
+    flex: 1;
+}
+
+
+/* Total display */
+
+h3 {
+    text-align: right;
+    margin-top: 15px;
+    color: #34495e;
+}
+
+
+/* Table for bill (bill.html) */
 
 table {
     margin: auto;
     border-collapse: collapse;
-    width: 70%;
+    width: 80%;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 th,
@@ -63,20 +146,20 @@ td {
 }
 
 th {
-    background-color: #c1eee0;
-    color: #333;
+    background-color: #a0e7e5;
+    color: #2c3e50;
 }
 
 tr:hover {
-    background-color: #e6f5f2;
+    background-color: #f1f9f9;
 }
 
 a {
     text-decoration: none;
-    color: #4d4d4d;
+    color: #1abc9c;
     font-weight: bold;
 }
 
 a:hover {
-    color: #333;
+    color: #16a085;
 }

@@ -1,14 +1,15 @@
-<<!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Billing System</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 
-    <body>
+<body>
+    <div class="container">
         <h1>Billing System</h1>
 
         <form action="/calculate" method="post" id="billingForm">
@@ -17,19 +18,23 @@
                     <input type="text" name="item" placeholder="Item Name" required>
                     <input type="number" name="quantity" placeholder="Quantity" class="quantity" required>
                     <input type="number" name="price" placeholder="Price per Item" class="price" required>
-                    <button type="button" onclick="removeItem(this)">Remove</button>
+                    <button type="button" class="removeBtn" onclick="removeItem(this)">Remove</button>
                 </div>
             </div>
+            <button type="button" class="addBtn" onclick="addItem()">Add Another Item</button><br><br>
 
-            <button type="button" onclick="addItem()">Add Another Item</button>
-            <br><br>
+            <!-- Tax and Discount fields -->
+            <div class="extra">
+                <input type="number" name="tax" placeholder="Tax / GST (%)">
+                <input type="number" name="discount" placeholder="Discount (₹)">
+            </div>
 
             <h3>Total: ₹<span id="grandTotal">0</span></h3>
-
-            <button type="submit">Calculate Bill</button>
+            <button type="submit" class="submitBtn">Calculate Bill</button>
         </form>
+    </div>
 
-        <script src="{{ url_for('static', filename='script.js') }}"></script>
-    </body>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
 
-    </html>
+</html>
